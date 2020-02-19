@@ -11,10 +11,14 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
+import java.net.Socket;
 
 public class TesteCopiarArquivo {
 	
 	public static void main(String[] args) throws IOException{
+		
+		Socket s = new Socket();
+		System.out.println(s.getTcpNoDelay());
 		
 		InputStream input = new FileInputStream("lorem.txt");
 		Reader r = new InputStreamReader(input);
